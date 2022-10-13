@@ -20,7 +20,6 @@ function setup() {
 }
 
 function draw() {
- // background(0,0,200);
  textFont(f1,40)
  if(!s1.isPlaying())
       s1.play();
@@ -37,7 +36,6 @@ case 0://auto off
   image(fr1, width/2, height/2, 300, 400);
   image(iOff, width/6, height/2, 300, 300);
   image(iW, 5*width/6, height/2, 300, 300);
-  text("Case 0",100,100)
   break;
   
 case 1://auto on
@@ -69,7 +67,6 @@ timer++;
    image(fr1, width/2, height/2, 300, 400);
     timer=0;
   }
-  text("Case 1",100,100);
   break;
   case 2://auto on
   timer++;
@@ -100,8 +97,6 @@ timer++;
      image(fr1, width/2, height/2, 300, 400);
       state=0;
     }
-    text("Case 2",100,100);
-  
     
     break;
 }
