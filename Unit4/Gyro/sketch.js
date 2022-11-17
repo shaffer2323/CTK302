@@ -31,7 +31,7 @@ function draw() {
 
   rotate(radians(alpha)); 
 
-  image(Spidey, xPosition, yPosition, 400, 400);
+  image(Spidey, 0, 0, 400, 400);
  
   pop();
 
@@ -57,7 +57,7 @@ function draw() {
   noStroke();
   textSize(300);
   textAlign(CENTER);
-  text("Thwip!", width / 2, height / 2,0.75*width,0.75*height);
+  text("Thwip!", windowWidth / 2, windowWidth / 2,0.75*width,0.75*height);
 
 }
 
