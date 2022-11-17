@@ -3,7 +3,7 @@ let alpha = 0, beta = 0 , gamma = 0;
 let f1;
 let xPosition = 0;
 let yPosition = 0;
-let x = 0, y = 0, z = 0 ; // accelerometer data
+let x = 0, y = 0, z = 0 ; 
 
 
 function setup() {
@@ -31,7 +31,7 @@ function draw() {
 
   rotate(radians(alpha)); 
 
-  image(Spidey, 0, 0, 500, 500);
+  image(Spidey, xPosition, yPosition, 400, 400);
  
   pop();
 
