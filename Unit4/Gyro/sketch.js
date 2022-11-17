@@ -14,7 +14,7 @@ function setup() {
 
 
   f1= loadFont("assets/Ghostz.ttf");
-  Spidey = loadImage("assets/spiderLogo");
+  Spidey = loadImage("assets/spiderLogo.png");
   imageMode(CENTER);
   rectMode(CENTER);
 
@@ -60,7 +60,7 @@ function draw() {
   // Text that makes CTK type in the background
   fill('white');
   noStroke();
-  textSize(300);
+  textSize(200);
   textAlign(CENTER);
   text("Thwip Thwip", width / 2, height / 2);
 
