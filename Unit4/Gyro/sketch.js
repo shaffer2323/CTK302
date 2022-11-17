@@ -14,7 +14,7 @@ function setup() {
 
 
   f1= loadFont("assets/Ghostz.ttf");
-  Spidey = loadImage("assets/spiderLogo.png");
+  Spidey = loadImage("assets/spiderman.jpg");
   imageMode(CENTER);
   rectMode(CENTER);
 
@@ -36,7 +36,7 @@ function draw() {
 
   rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
 
-  image(Spidey, xPosition, yPosition, 500, 500);
+  image(Spidey, 0, 0, 500, 500);
   // rect(0, 0, 100, 100) ;
   pop();
 
@@ -60,7 +60,7 @@ function draw() {
   // Text that makes CTK type in the background
   fill('white');
   noStroke();
-  textSize(200);
+  textSize(300);
   textAlign(CENTER);
   text("Thwip Thwip", width / 2, height / 2);
 
