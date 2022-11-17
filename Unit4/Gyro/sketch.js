@@ -1,7 +1,5 @@
-/* For mobile phones - accesses accelerometer and gyroscope.
-Make sure you turn on orientation lock on your iPhone or Android device. */
 
-let alpha = 0, beta = 0 , gamma = 0; // gyroscope variablers
+let alpha = 0, beta = 0 , gamma = 0;
 let f1;
 let xPosition = 0;
 let yPosition = 0;
@@ -24,24 +22,21 @@ function draw() {
 
   background('red'); 
   textFont(f1,20);
-  // the map command !!!!
-  // takes your variable and maps it from range 1 to range 2
-  // map(yourVar, range1_x, range1_y, range2_x, range2_y) ;
   xPosition = map(gamma, -60, 60, 0, width);
   yPosition = map(beta, -30, 30, 0, height);
 
-  push(); // before you use translate, rotate, or scale commands, push and then pop after
+  push(); 
 
-  translate(xPosition, yPosition); // move everything over by x, y
+  translate(xPosition, yPosition); 
 
-  rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
+  rotate(radians(alpha)); 
 
   image(Spidey, 0, 0, 500, 500);
-  // rect(0, 0, 100, 100) ;
+ 
   pop();
 
 
-  // Text commands that display debugging data
+ 
   textAlign(LEFT);
   textSize(20);
   fill('black');
@@ -53,11 +48,11 @@ function draw() {
   textSize(20);
   text("acceleration data:", 25, 125);
   textSize(15);
-  text("x = " + x.toFixed(2), 25, 150); // .toFixed means just show (x) decimal places
+  text("x = " + x.toFixed(2), 25, 150); 
   text("y = " + y.toFixed(2), 25, 170);
   text("z = " + z.toFixed(4), 25, 190);
 
-  // Text that makes CTK type in the background
+ 
   fill('white');
   noStroke();
   textSize(300);
@@ -68,16 +63,16 @@ function draw() {
 
 
 
-// Read in gyroscope data
+
 window.addEventListener('deviceorientation', function(e) {
   alpha = e.alpha;
   beta = e.beta;
   gamma = e.gamma;
 });
 
-// Read in accelerometer data
+
 window.addEventListener('devicemotion', function(e) {
-  // get accelerometer values
+ 
   x = e.acceleration.x;
   y = e.acceleration.y;
   z = e.acceleration.z;
