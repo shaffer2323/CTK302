@@ -14,7 +14,7 @@ function setup() {
 
 
   f1= loadFont("assets/Ghostz.ttf");
-  Spidey = loadImage("assets/spiderman.jpg");
+  Spidey = loadImage("assets/spiderLogo.png");
   imageMode(CENTER);
   rectMode(CENTER);
 
@@ -62,7 +62,7 @@ function draw() {
   noStroke();
   textSize(300);
   textAlign(CENTER);
-  text("Thwip Thwip", width / 2, height / 2,width,height);
+  text("Thwip Thwip", width / 2, height / 2,0.75*width,0.75*height);
 
 }
 
