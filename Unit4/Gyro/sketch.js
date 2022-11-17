@@ -62,7 +62,7 @@ function draw() {
   noStroke();
   textSize(300);
   textAlign(CENTER);
-  text("Thwip Thwip", width / 2, height / 2);
+  text("Thwip Thwip", width / 2, height / 2,width,height);
 
 }
 
