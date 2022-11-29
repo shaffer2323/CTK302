@@ -22,6 +22,12 @@ function draw() {
 
   background('red'); 
   textFont(f1,20);
+  fill('white');
+  noStroke();
+  textSize(50);
+  textAlign(CENTER);
+  text("Thwip!", windowWidth / 2, windowWidth / 2,0.75*width,0.75*height);
+  
   xPosition = map(gamma, -60, 60, 0, width);
   yPosition = map(beta, -30, 30, 0, height);
 
@@ -37,27 +43,9 @@ function draw() {
 
 
  
-  textAlign(LEFT);
-  textSize(20);
-  fill('black');
-  text("orientation data:", 25, 25);
-  textSize(15);
-  text("alpha: " + alpha, 25, 50);
-  text("beta: " + beta, 25, 70);
-  text("gamma: " + gamma, 25, 90);
-  textSize(20);
-  text("acceleration data:", 25, 125);
-  textSize(15);
-  text("x = " + x.toFixed(2), 25, 150); 
-  text("y = " + y.toFixed(2), 25, 170);
-  text("z = " + z.toFixed(4), 25, 190);
-
  
-  fill('white');
-  noStroke();
-  textSize(300);
-  textAlign(CENTER);
-  text("Thwip!", windowWidth / 2, windowWidth / 2,0.75*width,0.75*height);
+ 
+  
 
 }
 
