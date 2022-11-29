@@ -48,7 +48,6 @@ imageMode(CENTER);
 function draw() {
   xPosition = map(gamma, -60, 60, 0, width);
   yPosition = map(beta, -30, 30, 0, height);
-  textFont(f1,45);
   textAlign(LEFT);
   textSize(20);
   fill('black');
@@ -63,6 +62,7 @@ function draw() {
   text("x = " + x.toFixed(2), 25, 150); // .toFixed means just show (x) decimal places
   text("y = " + y.toFixed(2), 25, 170);
   text("z = " + z.toFixed(4), 25, 190);
+  textFont(f1,45);
   if(!s1.isPlaying())
       s1.play();
   switch (state) {
