@@ -8,8 +8,8 @@ let frame = 0;
 let f1, TFrog, LFrog,WFrog, Lpad, s1;
 
 let alpha = 0, beta = 0 , gamma = 0; // gyroscope variablers
-let xPosition = windowWidth/2;
-let yPosition = windowHeight/2;
+let xPosition = 0;
+let yPosition = 0;
 let x = 0, y = 0, z = 0 ; // accelerometer data
 function setup() {
   
@@ -46,9 +46,22 @@ imageMode(CENTER);
 }
 
 function draw() {
-  xPosition = map(gamma, -60, 60, 0, width/2);
-  yPosition = map(beta, -30, 30, 0, height/2);
- 
+  xPosition = map(gamma, -60, 60, 0, width);
+  yPosition = map(beta, -30, 30, 0, height);
+  textAlign(LEFT);
+  textSize(20);
+  fill('black');
+  text("orientation data:", 25, 25);
+  textSize(15);
+  text("alpha: " + alpha, 25, 50);
+  text("beta: " + beta, 25, 70);
+  text("gamma: " + gamma, 25, 90);
+  textSize(20);
+  text("acceleration data:", 25, 125);
+  textSize(15);
+  text("x = " + x.toFixed(2), 25, 150); // .toFixed means just show (x) decimal places
+  text("y = " + y.toFixed(2), 25, 170);
+  text("z = " + z.toFixed(4), 25, 190);
   textFont(f1,45);
   if(!s1.isPlaying())
       s1.play();
@@ -72,7 +85,6 @@ function draw() {
         timer = 0;
         state = 3;
       }
-   
       break;
 
     case 2: // win screen
@@ -92,8 +104,6 @@ function draw() {
       text("Are you happy? The frog sure isn't. you know. Because it's DEAD.", width / 2, height / 2+400, 2*width/3,height/2);
 
       break;
-       textAlign(LEFT);
-  
   }
 }
 
@@ -203,8 +213,13 @@ class player{
     }
   }
   move(){
-    frogPos.x=xPosition
-    frogPos.y=yPosition
+    //push(); // before you use translate, rotate, or scale commands, push and then pop after
+
+    //translate(xPosition, yPosition); // move everything over by x, y
+  
+    //rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
+  
+    //pop();
   }
 }
 
