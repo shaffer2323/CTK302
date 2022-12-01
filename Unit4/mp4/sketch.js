@@ -8,8 +8,8 @@ let frame = 0;
 let f1, TFrog, LFrog,WFrog, Lpad, s1;
 
 let alpha = 0, beta = 0 , gamma = 0; // gyroscope variablers
-let xPosition = 0;
-let yPosition = 0;
+let xPosition = windowWidth/2;
+let yPosition = windowHeight/2;
 let x = 0, y = 0, z = 0 ; // accelerometer data
 function setup() {
   
