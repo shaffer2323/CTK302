@@ -199,13 +199,13 @@ class player{
     }
   }
   move(){
-    //push(); // before you use translate, rotate, or scale commands, push and then pop after
+    push(); // before you use translate, rotate, or scale commands, push and then pop after
 
-    //translate(xPosition, yPosition); // move everything over by x, y
+    translate(xPosition, yPosition); // move everything over by x, y
   
-    //rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
+    rotate(radians(alpha)); // rotate the bunny depending on the alpha intake
   
-    //pop();
+    pop();
   }
 }
 
