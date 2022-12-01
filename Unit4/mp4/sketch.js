@@ -138,7 +138,7 @@ function game() {
 
   
   
-  frog= new player();
+
   frog.display();
   frog.move();
   pop();
@@ -199,6 +199,8 @@ class player{
     }
   }
   move(){
+    frogPos.x=xPosition;
+    frogPos.y=yPosition;
     push(); // before you use translate, rotate, or scale commands, push and then pop after
 
     translate(xPosition, yPosition); // move everything over by x, y
