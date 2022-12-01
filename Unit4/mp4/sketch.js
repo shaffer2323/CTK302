@@ -46,8 +46,8 @@ imageMode(CENTER);
 }
 
 function draw() {
-  xPosition = map(gamma, -60, 60, 0, width);
-  yPosition = map(beta, -30, 30, 0, height);
+  xPosition = map(gamma, -60, 60, 0, width/2);
+  yPosition = map(beta, -30, 30, 0, height/2);
  
   textFont(f1,45);
   if(!s1.isPlaying())
